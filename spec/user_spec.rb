@@ -23,7 +23,7 @@ describe User do
       user = User.login(password: 'Password3', username: 'TEST03')
       expect(user).to eq 3
     end 
-  end 
+  end
 
   describe '#requests' do 
     it 'shows a list of requests ready to be confirmed' do 
@@ -35,7 +35,6 @@ describe User do
         email: 'test1@test.com', 
         password: 'Password1'
         )
-
       expect(user.requests).to be_an Array
       expect(user.requests[0]['space_id']).to eq "1"
       expect(user.requests[0]['date_from']).to eq "2022-01-01"
@@ -44,4 +43,3 @@ describe User do
   end 
 
 end 
-
